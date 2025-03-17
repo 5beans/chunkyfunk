@@ -1,6 +1,11 @@
 # chunkyfunk
 
-After having put in considerable effort in amassing the ins and outs of these files, I had a laugh when I thought: klepto's generosity. In this repo are configs and supporting scripts and whatnot that comprise the wicked functionality of my Debian desktop, which is a Lenovo laptop.
+After having put in considerable effort in amassing the ins and outs of these files, I had a laugh when I thought: klepto's generosity.
+In this repo are configs and supporting scripts and whatnot that comprise the wicked functionality of my Debian desktop, which is a Lenovo laptop.
+
+I run Debian Trixie (currently testing) with a Liquorix kernel and the openbox window manager. From a login tty I run startx and auto login
+as the following line is in ~/.profile:
+ [ "$(tty)" = "/dev/tty1" ] && exec startx
 
 My current partition scheme is as folows, as you can see, I do not employ a SWAP partition:
 
@@ -44,11 +49,8 @@ tmpfs     /var/log    tmpfs    defaults,noatime,mode=1777    0    0
  I employ <a target="_blank" href="https://github.com/yokoffing/BetterFox">BetterFox</a> with some overrides in user.js:
 
  /****************************************************************************
-
  * START: MY OVERRIDES                                                      *
-
 ****************************************************************************/
-
 // visit https://github.com/yokoffing/Betterfox/wiki/Common-Overrides
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
@@ -69,8 +71,29 @@ user_pref("urlclassifier.features.socialtracking.skipURLs", "");
 // PREF: disable disk cache
 //user_pref("browser.cache.disk.enable", false);
 
+I make some changes in about:config, as well, and will include these in the future.
 
+I install Debian using the net installer burn'd to a USB stick using the expert tui installation option that I might install a targeted kernel.
+Additionally, I allow root login. My partitioning scheme changes periodically and it you are using these files for a smiliarly wicked desktop/workstation
+setup, you will partition as you see fit. When it comes time to install software in the Debian installer (tasksel) uncheck desktop and gnome and
+leave standard system utilities as the only chosen option.
 
-I run Debian with a dedicated /home partition on a drive so I can maintain my config's throughout however many ridiculous installs I do. I haven't scripted anything, instead, borrowing from Leo 
-https://github.com/leomarcov/debian-openbox/blob/master/README.md
-to kick off some immediate install handiness following a Debian net-install, bare-bones. Then I login as root, install sudo, logout, log back in as me, and run a quick apt install to get my stuff back. I could probably make a live distro out of my system, or, any number of other ways to install my Debian system following a freesh net-install
+Upon reboot post a successful Debian installation, I log in as root to install: sudo aptitude. Then I run visudo to add my 
+user account with the NOPASSWD:ALL option because, pfft...
+
+I log out and back in as my user account to run (sudo) the following handy script that installs my desktop: ~/bin/baseinst.sh
+
+<a target="_blank" href="https://github.com/leomarcov/debian-openbox/blob/master/README.md">Leo Marcov</a> has a couple handy post-install scripts
+I employ, namely:
+
+script_loginfetch
+install_sublimetext
+config_grub-skip
+
+He's got more that you might like, check it out.
+
+After this I reboot. Upon loggin in my typical awesomeness is available to me and I can work/play. I install Liquorix not, fire-up a terminal:
+
+curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
+
+reboot and enjoy.
