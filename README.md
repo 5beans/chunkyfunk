@@ -132,6 +132,13 @@ config_grub-skip<br />
 
 He's got more that you might like, check it out.
 
-reboot and enjoy.  Add:
+Add:
+
 	[ "$(tty)" = "/dev/tty1" ] && exec startx
+ 
 to your  ~/.profile file to auto login from tty after inputting your credentials.
+
+
+
+
+reboot and enjoy.
