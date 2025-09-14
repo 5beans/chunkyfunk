@@ -34,16 +34,16 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 
 I added the following to /etc/fstab:
 
-tmpfs     /tmp          tmpfs    defaults,noatime,mode=1777    0    0<br />
-tmpfs     /var/spool    tmpfs    defaults,noatime,mode=1777    0    0<br />
-tmpfs     /var/tmp      tmpfs    defaults,noatime,mode=1777    0    0<br />
-tmpfs     /var/log      tmpfs    defaults,noatime,mode=1777    0    0<br />
+	tmpfs     /tmp          tmpfs    defaults,noatime,mode=1777    0    0<br />
+	tmpfs     /var/spool    tmpfs    defaults,noatime,mode=1777    0    0<br />
+	tmpfs     /var/tmp      tmpfs    defaults,noatime,mode=1777    0    0<br />
+	tmpfs     /var/log      tmpfs    defaults,noatime,mode=1777    0    0<br />
 
 I add the following to:  /etc/sysctl.conf
 
-net.core.default_qdisc=fq
-net.ipv4.tcp_congestion_control=bbr
-vm.swappiness=10
+	net.core.default_qdisc=fq
+	net.ipv4.tcp_congestion_control=bbr
+	vm.swappiness=10
 
 In FIrefox, I make some changes in about:config if I wiull use a new profile:
 
