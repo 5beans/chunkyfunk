@@ -29,8 +29,8 @@ I log out and back in as my user account to run (sudo) the following handy scrip
 
 Following this I login and fire-up a terminal in order to accomplish a few post-install tasks.
 
-sudo update-alternatives --install /usr/bin/x-file-manager x-file-manager /usr/bin/thunar 210
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator ~/Downloads/kitty-0.42.2-x86_64/bin/kitty 210
+	sudo update-alternatives --install /usr/bin/x-file-manager x-file-manager /usr/bin/thunar 210
+	sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator ~/Downloads/kitty-0.42.2-x86_64/bin/kitty 210
 
 I added the following to /etc/fstab:
 
