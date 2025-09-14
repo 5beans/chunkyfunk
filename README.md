@@ -34,10 +34,10 @@ Following this I login and fire-up a terminal in order to accomplish a few post-
 
 I added the following to /etc/fstab:
 
-	tmpfs     /tmp          tmpfs    defaults,noatime,mode=1777    0    0<br />
-	tmpfs     /var/spool    tmpfs    defaults,noatime,mode=1777    0    0<br />
-	tmpfs     /var/tmp      tmpfs    defaults,noatime,mode=1777    0    0<br />
-	tmpfs     /var/log      tmpfs    defaults,noatime,mode=1777    0    0<br />
+	tmpfs     /tmp          tmpfs    defaults,noatime,mode=1777    0    0
+	tmpfs     /var/spool    tmpfs    defaults,noatime,mode=1777    0    0
+	tmpfs     /var/tmp      tmpfs    defaults,noatime,mode=1777    0    0
+	tmpfs     /var/log      tmpfs    defaults,noatime,mode=1777    0    0
 
 I add the following to:  /etc/sysctl.conf
 
@@ -128,8 +128,8 @@ install firefox sublime-text
 <a target="_blank" href="https://github.com/leomarcov/debian-openbox/blob/master/README.md">Leo Marcov</a> has a couple handy post-install scripts
 I employ, namely:
 
-script_loginfetch<br />
-config_grub-skip<br />
+script_loginfetch
+config_grub-skip
 
 He's got more that you might like, check it out.
 
