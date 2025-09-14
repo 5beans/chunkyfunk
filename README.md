@@ -73,7 +73,8 @@ If I will use a new profile I do:
     gsettings set org.gnome.desktop.wm.preferences theme "Nord-Openbox-theme-master"
     gsettings set org.gnome.desktop.interface icon-theme "Obsidian-Gray"
 
-in ~/.gtkrc-2.0
+and I create ~/.gtkrc-2.0 and add the following:
+
     include "/usr/share/themes/Nordic-darker/gtk-2.0/gtkrc"
 
 To get the notifications working, pfft, I do:
@@ -93,7 +94,7 @@ floorp:
 	curl -fsSL https://ppa.ablaze.one/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
 	sudo curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.ablaze.one/Floorp.list'
 
-phoenix:
+phoenix: is only installed occasionally as it tightens firefox up a lot. Also, if installed and profile back'd up, you will need it installed to use that profile
 
 	echo 'deb https://download.opensuse.org/repositories/home:/celenity/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:celenity.list
 	wget -O- https://download.opensuse.org/repositories/home:celenity/Debian_12/Release.key 2>/dev/null | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_celenity.gpg > /dev/null
