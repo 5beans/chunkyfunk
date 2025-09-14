@@ -7,14 +7,14 @@ Debian Trixie + Openbox wickedness. In this repo are configs and supporting scri
 
 Following is a handy reference to get to the same wicked functionality but it's not a bunch of fancy scripts or push-button functionality to get it. The steps include:
 
-installing Debian with the net installer
-installing sudo and aptitude
-running a handy script to install my desktop
+installing Debian with the net installer<br />
+installing sudo and aptitude<br />
+running a handy script to install my desktop<br />
 a few handy post-installation tweaks
 
-Included in this repo are some supporting files like: .bashrc and supporting, openbox configs, kitty, and some other stuff. Comes down to the pretty and some handy function.
+Included in this repo are some supporting files like .bashrc and supporting, openbox configs, kitty, and some other stuff. Comes down to the pretty and some handy function. You may notice some of the commands below are wonky because of aliases, which will be up in the repo post haste.
 
-Tip: I always install using the same user account so I can use the configs I made years ago. I have everything I need on an external drive and usb nub for those times I use a new user account that I may just run mc real quickly to copy everything over to the new user ~/ directory.
+I almost always install using the same user account so I can use the configs I made years ago. I have everything I need on an external drive and usb nub for those times I use a new user account that I may just run mc real quickly to copy everything over to the new user ~/ directory.
 
 My current partition scheme is as folows:
 
