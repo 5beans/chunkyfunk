@@ -13,8 +13,6 @@ Included in this repo are some supporting files like: .bashrc and supporting, op
 
 Tip: I always install using the same user account so I can use the configs I made years ago. I have everything I need on an external drive and usb nub for those times I use a new user account that I may just run mc real quickly to copy everything over to the new user ~/ directory.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 My current partition scheme is as folows, as you can see, I do not employ a SWAP partition:
 
 ![2025-09-14_772x171_12:20:11](https://github.com/user-attachments/assets/481b85e8-b548-48bd-9fab-e60d9f4a087c)
