@@ -77,48 +77,52 @@ in ~/.gtkrc-2.0
 
 To get the notifications working, pfft, I do:
 
-sudo cp /usr/share/applications/notification-daemon.desktop /etc/xdg/autostart/
-sudo chmod +x /etc/xdg/autostart/notification-daemon.desktop
+	sudo cp /usr/share/applications/notification-daemon.desktop /etc/xdg/autostart/
+	sudo chmod +x /etc/xdg/autostart/notification-daemon.desktop
 
 I'll add some other repos next, install some apps, remove a couple that I don't need, and install the Liquorix kernel:
 
 Librewolf:
+
 	sudo apt update && sudo apt install extrepo -y
 	sudo extrepo enable librewolf
 
 floorp:
+
 	curl -fsSL https://ppa.ablaze.one/KEY.gpg | sudo gpg --dearmor -o /usr/share/keyrings/Floorp.gpg
 	sudo curl -sS --compressed -o /etc/apt/sources.list.d/Floorp.list 'https://ppa.ablaze.one/Floorp.list'
 
 phoenix:
+
 	echo 'deb https://download.opensuse.org/repositories/home:/celenity/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:celenity.list
 	wget -O- https://download.opensuse.org/repositories/home:celenity/Debian_12/Release.key 2>/dev/null | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_celenity.gpg > /dev/null
 
 sublime text:
+
 	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo tee /etc/apt/keyrings/sublimehq-pub.asc > /dev/null
 	echo -e 'Types: deb\nURIs: https://download.sublimetext.com/\nSuites: apt/stable/\nSigned-By: /etc/apt/keyrings/sublimehq-pub.asc' | sudo tee /etc/apt/sources.list.d/sublime-text.sources
 
 firefox:
+
 	wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
 	echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
 
-    	echo '
-    	Package: *
-    	Pin: origin packages.mozilla.org
-    	Pin-Priority: 1000
-    	' | sudo tee /etc/apt/preferences.d/mozilla
+    echo '
+    Package: *
+    Pin: origin packages.mozilla.org
+    Pin-Priority: 1000
+    ' | sudo tee /etc/apt/preferences.d/mozilla
 
 update
 install firefox sublime-text
 
-remove exim* xdg-desktop-portal xdg-desktop-portal-gtk
+	remove exim* xdg-desktop-portal xdg-desktop-portal-gtk
 
-sudo update-alternatives --install /usr/bin/x-text-editor x-text-editor /usr/bin/subl 210
+	sudo update-alternatives --install /usr/bin/x-text-editor x-text-editor /usr/bin/subl 210
 	
-curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
+	curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash
 
  I don't add all of the above repos every time I reinstall, but, sublime and firefox are mainstays.
-
 
 <a target="_blank" href="https://github.com/leomarcov/debian-openbox/blob/master/README.md">Leo Marcov</a> has a couple handy post-install scripts
 I employ, namely:
