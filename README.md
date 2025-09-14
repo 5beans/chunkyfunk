@@ -59,12 +59,13 @@ In FIrefox, I make some changes in about:config if I wiull use a new profile:
 
 I copy some fonts/icons/themes over to /usr/share/:
 
-sudo cp -R .local/share/fonts/* /usr/share/fonts/
-sudo cp -R .local/share/themes/* /usr/share/themes/
-sudo cp -R .local/share/icons/* /usr/share/icons/
+	sudo cp -R .local/share/fonts/* /usr/share/fonts/
+	sudo cp -R .local/share/themes/* /usr/share/themes/
+	sudo cp -R .local/share/icons/* /usr/share/icons/
 
 Then, I make root look pretty:
-sudo lxappearance
+
+	sudo lxappearance
 
 If I will use a new profile I do:
 
@@ -137,8 +138,3 @@ Add:
 	[ "$(tty)" = "/dev/tty1" ] && exec startx
  
 to your  ~/.profile file to auto login from tty after inputting your credentials.
-
-
-
-
-reboot and enjoy.
