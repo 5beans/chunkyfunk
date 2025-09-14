@@ -2,6 +2,9 @@
 
 Debian Trixie + Openbox wickedness. In this repo are configs and supporting scripts and whatnot that comprise the wicked functionality of a wicked Debian desktop, which is running on a Lenovo P53s laptop. It's a very simple desktop configuration that is fast as hell and reliable. Most of what I do is set once and forget it and I employ many handy keybinds, aliases, and scripts. I am not using a login manager or wayland and there's no ricing going on here.
 
+<img width="1920" height="1080" alt="Screenshot_2025-09-14_15-59-34" src="https://github.com/user-attachments/assets/334dcbb9-9bb7-438c-a9a2-70d134c557f1" />
+
+
 Following is a handy reference to get to the same wicked functionality but it's not a bunch of fancy scripts or push-button functionality to get it. The steps include:
 
 installing Debian with the net installer
